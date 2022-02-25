@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Fast Track</title>
+  <!-- <documentation at http://demos.jquerymobile.com/1.4.1/ > -->
+
+  <link href='https://fonts.googleapis.com/css?family=Nova Flat' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/themes/my-custom-theme.css" />
+  <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" /> 
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
+  <script src="javascripts/index.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+
+</head>
+
+<body>
+
+  <!-- Start of  page ------------------------------------------------------------------>
+  <div data-role="page" id="home">
+
+    <!--   page header -->
+    <div data-role="header" data-theme='a'>
+      <div class="newFont">Fast Track!</div>
+      <div data-role="navbar" data-theme='a' id="nav_bar">
+        <ul>
+        <li><a href="#home" class='active-page'>Home Page</a></li>
+        <li><a href="#add">Add Task</a></li>
+        <li><a href="#tasks">Manage Tasks</a></li>
+        <li><a href="#currenttask">Current Task</a></li>
+        <li><a href="#history">Task Records</a></li>
+        </ul>
+      </div><!-- /navbar -->
+      <h2>Keep track of all of your regular tasks!</h>
+    </div>
+
+    <!--   page content -->
+    <div data-role="content" data-theme='a'>
+      <div class="Roboto">
+        <h2> Welcome to the Fast Track Mobile App!</h2>
+      </div>
+
+      <p>Fast Track™ is the latest and greatest personal time management app. Here's how it works:</p>
+      <ul>
+        <li>Click the add task link to create a new task for you to keep track of</li>
+        <li>Click on Current Task to start, stop, or pause your task</li>
+        <li>When you click Stop, the record of your task is stored in the Task Records page</li>
+        <li>Click on the Manage Tasks page to modify your previously created tasks </li>
+      </ul>
+
+    </div>
+
+    <!--  page footer -->
+    <div data-role="footer" data-theme='a'>
+      <h1>Copyright 2022 by TrackApp Inc.</h1>
+    </div>
+  </div>
+  <!-- End of  page ------------------------------------------------------------------>
+
+
+
+
+
+  <div data-role="page" id="add">
+    <!--  page header -->
+    <div data-role="header" data-theme='a'>
+      <div class="newFont">Fast Track!</div>
+      <div data-role="navbar" data-theme='a' id="nav_bar">
+        <ul>
+          <li><a href="#home">Home Page</a></li>
+          <li><a href="#add" class='active-page'>Add Task</a></li>
+          <li><a href="#tasks">Manage Tasks</a></li>
+          <li><a href="#currenttask">Current Task</a></li>
+          <li><a href="#history">Task Records</a></li>
+          </ul>
+      </div><!-- /navbar -->
+      <h2>Add a Task</h2>
+    </div>
+
+
+
+
+    <!-- page content -->
+  
+    <div data-role="content" data-theme='a'>
+      <div class="Roboto"> <h2>Enter a new task</h2> </div>
+      Enter task name <br />
+      <input type="text" value="" id="taskName" />
+      Estimated time <br />
+      <input type="text" value="" id="taskEstimatedTime" />
+  
+      <input type="button" value="Click To Add Task" id="buttonAdd" data-inline="true" />
+      <input type="button" value="Reset" id="buttonClear" data-inline="true" />
+    </div>
+
+       
+    
+    <!--   page footer -->
+    <div data-role="footer" data-theme='a'>
+      <h1>Copyright 2022 by TrackApp Inc.</h1>
+    </div>
+  </div>
+  <!-- End of  page ------------------------------------------------------------------>
+
+
+
+  <div data-role="page" id="tasks">
+    <!--   page header -->
+    <div data-role="header" data-theme='a'>
+      <div class="newFont">Fast Track!</div>
+      <div data-role="navbar" data-theme='a' id="nav_bar">
+        <ul>
+          <li><a href="#home">Home Page</a></li>
+          <li><a href="#add">Add Task</a></li>
+          <li><a href="#tasks" class='active-page'>Manage Tasks</a></li>
+          <li><a href="#currenttask">Current Task</a></li>
+          <li><a href="#history">Task Records</a></li>
+          </ul>
+      </div><!-- /navbar -->
+      <h2>Manage Tasks</h>
+    </div>
+    <!--   page content -->
+    <div data-role="content" data-theme='a'>
+      <div class="Roboto"><h2> Here are your tasks</h></div>
+      <div id="divTaskList"></div>
+      <input type="button" value="Sort By Time Created" id="buttonSortTime" data-inline="true" />
+      <input type="button" value="Sort By Alphabetical" id="buttonSortAlphabetical" data-inline="true" />
+      <input type="button" value="Edit Task" id="buttonEditTask" data-inline="true" />
+    </div>
+
+
+    <!--   page footer -->
+    <div data-role="footer" data-theme='a'>
+      <h1>Copyright 2022 by TrackApp Inc.</h1>
+    </div>
+  </div>
+  </div>
+  <!-- End of  page ------------------------------------------------------------------>
+
+
+  <!-- Start of  page -->
+  <div data-role="page" id="currenttask">
+  
+    <!--   page header -->
+    <div data-role="header" data-theme='a'>
+      <div class="newFont">Fast Track!</div>
+      <div data-role="navbar" data-theme='a' id="nav_bar">
+        <ul>
+          <li><a href="#home">Home Page</a></li>
+          <li><a href="#add">Add Task</a></li>
+          <li><a href="#tasks">Manage Tasks</a></li>
+          <li><a href="#currenttask" class='active-page'>Current Task</a></li>
+          <li><a href="#history">Task Records</a></li>
+        </ul>
+      </div><!-- /navbar -->
+      <h2>Current Task</h>
+    </div>
+  
+    <!--  content -->
+    <div data-role="content" data-theme='a'>
+
+      <div class="Roboto">
+        <h2>You are not tracking any tasks</h2>
+        <h2>00:00:00</h2>
+      </div>
+
+      <input type="button" value="Start" id="start" />
+      <input type="button" value="Pause" id="pause"/>
+      <input type="button" value="Stop" id="stop"/>
+    </div>
+    
+  
+    <!--    footer -->
+    <div data-role="footer" data-theme='a'>
+      <h1>Copyright 2022 by TrackApp Inc.</h1>
+    </div>
+  
+  </div>
+
+  <!-- End of  page ------------------------------------------------------------------>
+
+  <div data-role="page" id="history">
+    <!--   page header -->
+    <div data-role="header" data-theme='a'>
+      <div class="newFont">Fast Track!</div>
+      <div data-role="navbar" data-theme='a' id="nav_bar">
+        <ul>
+          <li><a href="#home">Home Page</a></li>
+          <li><a href="#add">Add Task</a></li>
+          <li><a href="#tasks">Manage Tasks</a></li>
+          <li><a href="#currenttask">Current Task</a></li>
+          <li><a href="#history" class='active-page'>Task Records</a></li>
+        </ul>
+      </div><!-- /navbar -->
+      <h2>Task Records</h>
+    </div>
+    <!--   page content -->
+    <div data-role="content" data-theme='a'>
+      <div class="Roboto"><h2>Here is a record of your tasks</h></div>
+      <div id="divTaskListSubset"></div>
+      <input type="button" value="Sort by task" id="buttonSubsetComedy" data-inline="true" />
+      <input type="button" value="Sort by date" id="buttonSubsetDrama" data-inline="true" />
+    </div>
+  
+  
+    <!--   page footer -->
+    <div data-role="footer" data-theme='a'>
+      <h1>Copyright 2022 by TrackApp Inc.</h1>
+    </div>
+  </div>
+  </div>
+  <!-- End of  page ------------------------------------------------------------------>
+
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+
+body{
+  --green: rgb(39, 109, 94);
+  --lightgreen: rgb(30, 100, 85)
+  --white: #ffffff;
+}
+
+.myHeader {
+  text-align: center;
+  font-size:      30px;
+  font-weight:    bold;
+
+} 
+
+.newFont {
+  text-align: center;
+  font-family: 'Nova Flat';font-size: 22px;
+  font-size:      40px;
+  font-weight:    bold;
+  color:  var(--green);
+}
+
+.Roboto {
+  text-align: center;
+  font-family: 'Roboto';font-size: 22px;
+  font-size:      40px;
+  font-weight:    bold;
+  color:  var(--green);
+}
+
+.center {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
